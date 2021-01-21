@@ -1,5 +1,7 @@
 const TeleBot = require('telebot');
 const https = require('https');
+const express = require('express')
+const app = express()
 
 const TELEGRAM_BOT_TOKEN = "1519565919:AAE_oE1OmI7yiQ6hwfGJEtTFhTKP_doGdtM";
 
@@ -50,3 +52,9 @@ bot.on(/(dog|vang|cho|meme)/, (msg) => {
 
 
 bot.start();
+
+app.get('/', function (req, res) {
+    res.send('lô');
+})
+
+app.listen(6969);
